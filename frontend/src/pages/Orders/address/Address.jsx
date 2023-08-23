@@ -75,7 +75,7 @@ const Address = ({ data, price }) => {
           }
         </div>}
       </div>
-      {error !== "Order placed successfully" ? <div className="errorhandle ordererror" dangerouslySetInnerHTML={{ __html: error }}></div> : null}
+      {typeof error !== "object" ? <div className="errorhandle ordererror" dangerouslySetInnerHTML={{ __html: error }}></div> : null}
       {orderData?.name === undefined || orderData?.address === undefined || orderData?.city === undefined || orderData?.phoneNo === undefined || orderData?.pincode === undefined || orderData?.state === undefined || orderData?.country === undefined ?
         <div className="addressinputs">
           <div className="orderAllInput">

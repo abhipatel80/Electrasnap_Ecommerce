@@ -44,9 +44,9 @@ const SingleOrder = () => {
                                 <p className='order-quantity'>Quantity : {orderData?.quantity}</p>
                             </div>
                             <div className="cart-delivery-date single-order-delivery">
-                                {singleOrderDetails?.orderStatus === "Cancelled" ? null : <p>Delivery by Wed Jul 5 | <span className='cart-green'>Free</span> <del> &#8377;40</del></p>
+                                {singleOrderDetails?.orderStatus === "Cancelled" ? null : <p>Delivery by {new Date(singleOrderDetails?.deliveredAt).toLocaleDateString('en-IN')} | <span className='cart-green'>{orderData?.price <= 10000 ? "Free" : <span>&#8377;40</span>}</span></p>
                                 }
-                                <p className='showdate order-status'>Ordered At : {new Date(singleOrderDetails?.createdAt).toLocaleDateString('en-IN')}</p>
+                                <p className='showdate order-status'>Ordered At : {new Date(singleOrderDetails?.orderedAt).toLocaleDateString('en-IN')}</p>
                                 <div className="singleorder-button">
                                     {singleOrderDetails?.orderStatus === "Delivered" ?
                                         <button

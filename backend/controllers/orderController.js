@@ -6,18 +6,29 @@ const newOrder = async (req, res) => {
     try {
         const { shippingInfo, orderItems, itemsPrice, totalPrice, shippingPrice } = req.body;
         const { name, phoneNo, pincode, state, country, city, address } = shippingInfo;
+
+        let validationError = null;
         if (!name || !phoneNo || !pincode || !state || !country || !city || !address) {
-            res.status(400).json("Please Enter all data");
+            validationError = "Please Enter all data";
         } else if (phoneNo.toString().length !== 10) {
-            res.status(400).json("Please Enter valid mobile number");
+            validationError = "Please Enter valid mobile number";
         } else if (pincode.toString().length !== 6) {
-            res.status(400).json("Please Enter valid pincode");
+            validationError = "Please Enter valid pincode";
+        };
+
+        if (validationError) {
+            res.status(400).json(validationError);
         } else {
-            const order = await ordermodel.create({
-                shippingInfo, orderItems, itemsPrice, totalPrice, shippingPrice, user: req.user._id
+            const neworder = new ordermodel({
+                shippingInfo, orderItems, itemsPrice, totalPrice, shippingPrice, user: req.user._id,
+                orderedAt: new Date(),
             });
 
-            res.status(201).json("Order placed successfully");
+            let deliveredDate = new Date(neworder.orderedAt);
+            deliveredDate.setDate(deliveredDate.getDate() + 6);
+            neworder.deliveredAt = deliveredDate;
+
+            await neworder.save();
 
             const msg = `Dear, ${name} \n\n Your Order is Placed Successfully, we are try to deliver your Product as soon as possible. \n\n productName: ${orderItems.name} \n\n productQuantity : ${orderItems.quantity || 1} \n\n Total: ${orderItems.price} \n\n Thank you for shopping😊.`
 
@@ -27,9 +38,10 @@ const newOrder = async (req, res) => {
                 message: msg
             });
 
-            const product = await productmodel.findById(order.orderItems.product);
-            product.stock -= order.orderItems.quantity;
+            const product = await productmodel.findById(neworder.orderItems.product);
+            product.stock -= neworder.orderItems.quantity;
             await product.save();
+            res.status(201).json("Order placed successfully");
         };
     } catch (e) {
         res.status(400).json(e);
