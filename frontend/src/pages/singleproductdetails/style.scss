@@ -1,0 +1,158 @@
+.mainsinglepro {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 60px;
+}
+.left-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
+  border: 1px solid rgb(224, 216, 216);
+  padding: 40px 20px;
+  margin-right: 40px;
+  max-height: 500px;
+  overflow: hidden;
+}
+.product-div {
+  width: 80vw;
+  overflow-y: scroll;
+  max-height: 500px;
+}
+.product-div::-webkit-scrollbar {
+  display: none;
+}
+.product-img img {
+  width: 400px;
+}
+.singleprobtn {
+  display: flex;
+  justify-content: space-around;
+  width: 350px;
+  margin-top: 30px;
+}
+.cartbtn {
+  padding: 10px 28px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.price {
+  font-weight: 500;
+  font-size: 28px;
+}
+.delprice {
+  color: grey;
+  font-size: 17px;
+}
+.green {
+  color: green;
+  font-size: 17px;
+}
+.desc {
+  width: 650px;
+  font-weight: 500;
+  font-size: 15px;
+}
+.allicons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.first h5 {
+  font-size: 15px;
+}
+.first {
+  margin-right: 45px;
+  width: 80px;
+}
+.logo {
+  font-size: 38px;
+  color: rgb(18, 7, 172);
+}
+.morefeature {
+  font-weight: 500;
+  font-size: 17px;
+}
+.instock {
+  color: green;
+  font-size: 18px;
+}
+.outofstock {
+  color: red;
+  font-size: 18px;
+}
+.specification {
+  border: 1px solid rgb(224, 218, 218);
+  padding: 20px;
+}
+.specification h2 {
+  font-size: 26px;
+  border-bottom: 1px solid rgb(224, 218, 218);
+  padding-bottom: 20px;
+}
+.specification h4 {
+  font-size: 22px;
+  padding: 8px 0px;
+}
+.left-title {
+  color: gray;
+  margin-right: 50px;
+}
+.all-title {
+  font-weight: 500;
+  display: flex;
+}
+.rateuser {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.rateuser h2 {
+  font-size: 26px;
+}
+.reviews {
+  border: 1px solid rgb(224, 218, 218);
+  padding: 20px;
+  margin-top: 20px;
+}
+.ratebtn {
+  font-weight: 500;
+  border-radius: 2px;
+}
+.usereviews {
+  font-weight: 500;
+  border-top: 1px solid rgb(224, 218, 218);
+}
+.username {
+  margin-bottom: 10px;
+  margin-top: 15px;
+  position: relative;
+}
+.useratestar {
+  background-color: green;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.aistar {
+  margin-bottom: 3px;
+}
+.del-rev-btn {
+  color: rgb(255, 72, 0);
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+.rev-comment {
+  width: 600px;
+}
+.show-all-rating {
+  max-height: 300px;
+  overflow: scroll;
+}
+.show-all-rating::-webkit-scrollbar {
+  display: none;
+}

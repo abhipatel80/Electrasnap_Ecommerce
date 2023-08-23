@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  background-color: blue;
+  color: white;
+  box-shadow: 0px 1px 10px 2px rgb(171, 171, 240);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+ul {
+  display: flex;
+  padding-right: 40px;
+}
+.mainul,
+.first-li {
+  list-style: none;
+  padding: 18px 20px;
+  font-size: 19px;
+  font-weight: 500;
+}
+.electrasnap {
+  font-size: 22px;
+}
+.searchnav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+#search {
+  outline: none;
+  padding: 4px 20px;
+  width: 400px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.right {
+  display: flex;
+  margin-left: auto;
+}
+.navlinknav {
+  color: white;
+  text-decoration: none;
+}
+.loginbtn {
+  padding: 5px 20px;
+  font-weight: bold;
+  border-radius: 4px;
+  color: blue;
+  background-color: white;
+  margin-left: 40px;
+  cursor: pointer;
+  margin-right: 25px;
+  font-size: 20px;
+}
+.sup {
+  font-size: 20px;
+  margin-left: 2px;
+}
+.profile-btn {
+  padding-left: 40px;
+  cursor: pointer;
+  padding-right: 25px;
+}
+.dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile {
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+}
+.dropdown-item {
+  font-size: 16px;
+  border-bottom: 1px solid rgb(231, 228, 228);
+  padding: 12px;
+}
+.drop-icon {
+  margin-right: 12px;
+}
+.dropdown-i {
+  margin-bottom: 7px;
+}
+
+@media only screen and (max-width: 400px) {
+  .mainul,
+  .first-li {
+    padding: 4px 8px;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  #search {
+    padding: 2px 8px;
+    width: 200px;
+    margin-top: 4px;
+    font-size: 8px;
+    margin-left: -8px;
+  }
+  .nav-icons {
+    font-size: 12px !important;
+    margin-left: 10px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .profile-btn {
+    font-size: 14px !important;
+    padding-left: 20px;
+    padding-right: 4px;
+    margin-top: 8px;
+  }
+  .sup {
+    font-size: 11px;
+  }
+  .electrasnap {
+    font-size: 12px;
+  }
+  .loginbtn {
+    padding: 3px 10px;
+    margin-left: 18px;
+    font-size: 10px;
+  }
+}

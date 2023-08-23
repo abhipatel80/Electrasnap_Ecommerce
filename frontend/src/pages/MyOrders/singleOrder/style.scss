@@ -1,0 +1,53 @@
+.mainSingleOrder {
+  background-color: rgb(245, 245, 245);
+  height: 56vh;
+  margin-top: -15px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 50px;
+}
+.left-order-details {
+  background-color: white;
+  height: 220px;
+}
+.right-address {
+  background-color: white;
+  margin-left: 20px;
+  height: 220px;
+  padding: 20px;
+}
+.show-address p {
+  font-weight: 500;
+}
+.showdate {
+  font-weight: 500;
+  margin-top: -8px;
+  color: black;
+}
+.address-name {
+  margin-bottom: 6px;
+  margin-top: 14px;
+}
+.order-buttons {
+  margin-left: 150px;
+}
+.left-order-details {
+  display: flex;
+  padding: 20px;
+}
+.singleorder-img img {
+  width: 180px;
+  margin-right: 20px;
+}
+.singleorder-button {
+  margin-top: 70px;
+  margin-left: 80px;
+  outline: none;
+}
+.single-order-delivery {
+  margin-left: auto;
+  margin-right: 10px;
+}
+.ratebtn{
+  outline: none;
+}

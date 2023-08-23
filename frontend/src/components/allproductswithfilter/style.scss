@@ -1,0 +1,58 @@
+.all-company-name {
+  font-size: 18px;
+}
+.company-carousel {
+  text-align: center;
+}
+.cateproduct {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 40px;
+  height: 500px;
+  overflow: scroll;
+}
+.cateproduct::-webkit-scrollbar {
+  display: none;
+}
+.mainfilterdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headproduct {
+  background-color: rgb(84, 84, 250);
+  color: white;
+  margin-top: 40px;
+  padding: 8px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+}
+.headcate {
+  font-size: 26px;
+}
+.filter-drop-down {
+  outline: none;
+  padding: 4px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.btn-company{
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 5px 15px;
+}
+.company-item{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+}
+.no-product-found{
+  height: 400px !important;
+}
