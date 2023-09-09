@@ -12,8 +12,8 @@ import { userAsync } from '../../store/userSlice';
 import SimilarProduct from './SimilarProduct';
 import Star from '../../components/ratingstar/Star';
 import Img from '../../components/lazyloading/Img';
-import './style.scss';
 import Spinner from '../../components/spinner/Spinner';
+import './style.scss';
 
 const SingleProDetails = () => {
 

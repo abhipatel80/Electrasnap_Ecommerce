@@ -5,8 +5,8 @@ const Spinner = () => {
     return (
         <>
             <div className="loading">
-                <div class="spinner-border spinner" role="status">
-                    <span class="visually-hidden">Loading...</span>
+                <div className="spinner-border spinner" role="status">
+                    <span className="visually-hidden">Loading...</span>
                 </div>
             </div>
         </>
